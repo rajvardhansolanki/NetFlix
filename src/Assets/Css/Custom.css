@@ -77,6 +77,10 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .card-container {
+        padding: 1px 8px 1px 8px;
+    }
+
     .card-img {
         max-width: initial;
     }
