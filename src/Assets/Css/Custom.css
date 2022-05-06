@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+}
+
+/* Scrool bar */
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Scrool bar */
+
+/* loader */
+
+.loader-container {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* loader */
+
+.logo {
+    width: auto;
+    height: 35px;
+}
+
+.card {
+    max-height: 385px;
+}
+
+.card-img {
+    max-width: 203px;
+    max-height: 229px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 12px;
+}
+
+.text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.custom-shadow {
+    box-shadow: rgba(51, 16, 16, 0.89) 3px -5px 45px;
+}
+
+@media only screen and (max-width: 767px) {
+    .card-container {
+        padding: 1px 26px 1px 26px;
+    }
+
+    .card-img {
+        max-width: initial;
+    }
+}
