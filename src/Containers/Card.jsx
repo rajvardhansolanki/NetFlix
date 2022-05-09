@@ -6,11 +6,12 @@ const Card = ({
   cardTitle,
   paragraph,
   btnLable,
-  link
+  link,
+  key
 }) => {
   return (
     <React.Fragment>
-      <div className="card-container">
+      <div className="card-container" key={key}>
         <div className="card custom-shadow">
           <img className="card-img-top card-img" src={src} alt={alt} />
           <div className="card-body">

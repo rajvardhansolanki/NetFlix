@@ -8,6 +8,7 @@ import Header from "./Containers/Header.jsx"
 import PageNotFound from "./Pages/PageNotFound.jsx"
 // import MovieDetails from "./MovieDetails/MovieDetails.jsx";
 import MovieList from "./MovieList/MovieList.jsx";
+import Home from "./Pages/Home.jsx";
 
 const initialState = {
   loder: true
@@ -31,7 +32,7 @@ function App() {
           <Router>
             <Header />
             <Switch>
-              <Route path="/" exact component={MovieList}></Route>
+              <Route path="/" exact component={Home}></Route>
               <Route path="/movie/:imdbID" component={MovieList}></Route>
               <Route component={PageNotFound}></Route>
             </Switch >

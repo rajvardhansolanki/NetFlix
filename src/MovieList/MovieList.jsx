@@ -1,36 +1,22 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
+import { useSelector } from "react-redux"
+import { getAllMovies } from "../Redux/MovieSlice.js"
 import Card from "../Containers/Card.jsx"
 
-
-
 const MovieList = () => {
-  const [movie, setMovie] = useState()
-
-  useEffect(() => {
-    console.log("sadd");
-    const fetchMovie = async () => {
-      await fetch("https://www.fakerestapi.com/datasets/api/v1/movie-details-dataset.json")
-        .then(response => response.json())
-        .then(data => {
-          setMovie(data.data)
-        })
-    }
-    fetchMovie()
-  }, [])
-
-  console.log("movie :>> ", movie);
-
+  const MovieData = useSelector(getAllMovies)
   return (
     <React.Fragment>
       <div className="container-fluid">
         <div className="row gy-3 mt-1">
           {
-            movie === undefined ? "" :
-              movie.map((item) => {
+            MovieData === undefined ? "" :
+              MovieData.map((item, index) => {
                 return (
                   <>
                     <div className="col-lg-2 col-md-4 col-sm-12">
                       <Card
+                        key={index}
                         cardTitle={item.title}
                         paragraph={item.description}
                         src={item.poster}

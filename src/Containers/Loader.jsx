@@ -7,7 +7,7 @@ const LoaderScreen = ({
   return (
     <>
       <div className="loader-container">
-        <Loader type="bubble-scale" bgColor={loadercolor} size={60} />
+        <Loader type="spinner-default" bgColor={loadercolor} size={60} />
       </div>
     </>
   )
